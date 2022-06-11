@@ -432,3 +432,7 @@ class AvailableJobDetailView(DetailView):
    
 def about(request):
     return render(request,'users/about.html')
+def page_not_found_view(request):
+    return render(request,'users/404.html')
+def page_restricted_view(request):
+    return render(request,'users/403.html')

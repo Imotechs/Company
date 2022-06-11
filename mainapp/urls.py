@@ -13,6 +13,7 @@ from .views import(
     AvailableJobCreateView,
     AvailableWorkerCreateView,
     FarmImplimentsCreateView,
+    page_not_found_view,
     #home update views
     CropUpdateView,
     LandUpdateView,
@@ -44,6 +45,7 @@ from .views import(
     FarmImplimentssListView,
     WorkerListView,
     JobListView,
+    page_restricted_view,
 
 )
 import users.views as user_views
@@ -57,6 +59,8 @@ urlpatterns = [
     path('our/terms/conditions/', user_views.terms, name = 'terms'),
     path('help/me/', user_views.help, name = 'help'),
     path('contact/us/', user_views.contact, name = 'contact'),
+    path('not/found/', page_not_found_view, name = 'page_not_found_view'),
+    path('restricted/', page_restricted_view, name = 'page_restricted_view'),
     path('about/us/', about, name = 'about'),
     #create home urls
     path('add/crop/', CropCreateView.as_view(), name = 'addcrop'),

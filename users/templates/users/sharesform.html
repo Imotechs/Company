@@ -16,20 +16,20 @@
     <div class="row">
       <h4>Personal Information</h4>
       <div class="input-group input-group-icon">
-        <input name="full_name" type="text" placeholder="Full Name"/>
+        <input  required="required"  name="full_name" type="text" placeholder="Full Name"/>
         <div class="input-icon"><i class="fa fa-user"></i></div>
       </div>
       <div class="input-group input-group-icon">
-        <input name ="phone"type="text" placeholder="Phone Number"/>
+        <input  required="required"  name ="phone"type="text" placeholder="Phone Number"/>
         
       </div>
       {%csrf_token%}
 
-      <select name="status">
+      <select  required="required"  name="status">
         <option value="Married">Married</option>
         <option value="Single">Single</option>
       </select>
-      <select name="work_status">
+      <select  required="required"  name="work_status">
         <option value="Umployed">Employed</option>
         <option value="Unemployed">Unemployed</option>
         <option value="Student">Student</option>
@@ -42,11 +42,11 @@
     <div class="row">
       <h4>Contact Information</h4>
       <div class="input-group input-group-icon">
-        <input name = "address"type="address" placeholder="Home Address"/>
+        <input  required="required"  name = "address"type="address" placeholder="Home Address"/>
         
       </div>
       <div class="input-group input-group-icon">
-        <input name = "email"type="email" placeholder="Email"/>
+        <input  required="required"  name = "email"type="email" placeholder="Email"/>
         <div class="input-icon"><i class="fa fa-envelope"></i></div>
       </div>
 
@@ -56,12 +56,12 @@
         <h4>Means of Identification</h4>
         <div class="col-half">
           <div class="input-group input-group-icon">
-            <input name ="id_number"type="text" placeholder="ID Number"/>
+            <input required="required" name ="id_number"type="text" placeholder="ID Number"/>
           </div>
         </div>
         <div>
           <div class="input-group">
-            <select name="id_type">
+            <select  name="id_type">
               <option value="Nation_id">National ID</option>
               <option value="Voters_card">Voters Card</option>
               <option value="Driver_licence">Driver Licence</option>
@@ -73,7 +73,7 @@
           
         </div>
         <div class="input-group input-group-icon">
-          <input name="Country" type="text" placeholder="Country"/>
+          <input  required="required"  name="Country" type="text" placeholder="Country"/>
           
         </div>
       
@@ -85,19 +85,19 @@
         <h4>Date of Birth</h4>
         <div class="input-group">
           <div class="col-third">
-            <input name= "dobd"type="text" placeholder="DD"/>
+            <input  required="required"  name= "dobd"type="text" placeholder="DD"/>
           </div>
           <div class="col-third">
-            <input name= "dobm"type="text" placeholder="MM"/>
+            <input  required="required"  name= "dobm"type="text" placeholder="MM"/>
           </div>
           <div class="col-third">
-            <input name= "doby" type="text" placeholder="YYYY"/>
+            <input required="required"  name= "doby" type="text" placeholder="YYYY"/>
           </div>
         </div>
       </div>
       <div class="col-half">
         <h4>Gender</h4>
-        <div class="input-group">
+        <div  required="required"  class="input-group">
           <input id="gender-male" type="radio" name="gender" value="male"/>
           <label for="gender-male">Male</label>
           <input id="gender-female" type="radio" name="gender" value="female"/>
@@ -108,8 +108,8 @@
     <div class="row">
       <h4>Payment Details</h4>
       <div class="input-group">
-        <input id="payment-method-card" type="radio" name="payment_method" value="card" checked="true"/>
-        <label for="payment-method-card"><span><i class="fa fa-cc-visa"></i>Bank Account</span></label>
+        <input  required="required"  id="payment-method-card" type="radio" name="payment_method" value="card" checked="true"/>
+        <label   for="payment-method-card"><span><i class="fa fa-cc-visa"></i>Bank Account</span></label>
         <input id="payment-method-paypal" type="radio" name="payment-method" value="paypal"/>
         <label for="payment-method-paypal"> <span><i class="fa fa-cc-paypal"></i>Wallet</span></label>
       </div>
@@ -125,7 +125,7 @@
       </div>
       <div>
         <div class="input-group">
-          <select name="acc_type">
+          <select  required="required"  name="acc_type">
             <option value="savings">Savings</option>
             <option value="current">Current</option>
           </select>
@@ -134,7 +134,7 @@
     </div>
     <h4>Enter Investment Amount</h4>
     <div class="input-group input-group-icon">
-      <input name ="amount" type="number" placeholder="Min:NGN {{shares.min_cost}}, Max NGN{{shares.max_cost}}"/>
+      <input  required="required"  name ="amount" type="number" placeholder="Min:NGN {{shares.min_cost}}, Max NGN{{shares.max_cost}}"/>
       
     </div>
 
